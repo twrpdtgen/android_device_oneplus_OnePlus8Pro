@@ -1,0 +1,15 @@
+# mount point       fstype    device                                                                flags
+/system           ext4     system                                                    flags=display="System";backup=1;logical;slotselect
+/system_ext       ext4     system_ext                                                flags=display="System_ext";backup=1;logical;slotselect
+/product          ext4     product                                                   flags=display="Product";backup=1;logical;slotselect
+/vendor           ext4     vendor                                                    flags=display="Vendor";backup=1;logical;slotselect
+/odm              ext4     odm                                                       flags=display="Odm";backup=1;logical;slotselect
+/metadata         ext4     /dev/block/by-name/metadata                               flags=display="Metadata"
+/data             f2fs     /dev/block/bootdevice/by-name/userdata                    flags=display="Data"
+/persist          ext4     /dev/block/bootdevice/by-name/persist                     flags=display="Persist"
+/misc             emmc     /dev/block/bootdevice/by-name/misc                        flags=display="Misc";backup=1;flashimg=1
+/usbotg           vfat     /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*     flags=display="Usbotg"
+/firmware_mnt     vfat     /dev/block/bootdevice/by-name/modem                       flags=display="Firmware_mnt";slotselect
+/dsp              ext4     /dev/block/bootdevice/by-name/dsp                         flags=display="Dsp";slotselect
+/bt_firmware      vfat     /dev/block/bootdevice/by-name/bluetooth                   flags=display="Bt_firmware";slotselect
+/op2              ext4     /dev/block/bootdevice/by-name/op2                         flags=display="Op2"
